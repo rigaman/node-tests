@@ -1,5 +1,5 @@
-var injectr = require('../injectr.js');
-var module = injectr('./lib/businesslayer/businessTest.js', {
+var injector = require('../injector.js');
+var module = injector('./lib/businesslayer/businessTest.js', {
    '../datalayer/dataTest.js' : './lib/datamock/dataTest.js',
 });
 describe("Welcome to jasmine unit tests", function() {
