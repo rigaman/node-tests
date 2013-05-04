@@ -1,0 +1,8 @@
+{
+  "name": "dataTest",
+  "main": "lib/datalayer/dataTest.js"
+}
+{
+  "name": "dataMock",
+  "main": "lib/datamock/dataTest.js"
+}
