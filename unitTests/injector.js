@@ -21,14 +21,9 @@ module.exports = function (file, mocks, context) {
     }
     script = vm.createScript(cache[file], file);
     context.require = function (a) {
-        
         if (mocks[a]) {
             return require(path.resolve(mocks[a]));
         }
-        if (a.indexOf('.') === 0) {
-            a = path.join(path.dirname(file), a);
-        }
-        return require(a);
     };
     context.module = {
         exports : {}
@@ -38,10 +33,5 @@ module.exports = function (file, mocks, context) {
 };
 
 module.exports.onload = function (file, content) {
-    if (file.match(/\.coffee$/)) {
-        return require('coffee-script').compile(content, {
-            filename : file
-        });
-    }
     return content;
 };
