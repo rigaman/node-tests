@@ -17,5 +17,4 @@ describe("Asynchronous Methods'", function(){
 	      expect(fetchDone).toBeTruthy();
 	    });
 	});
-
 });
